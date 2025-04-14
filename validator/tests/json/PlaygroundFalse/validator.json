@@ -409,24 +409,38 @@
 																	"Pattern": {
 																		"LeafNode": {
 																			"Expr": {
-																				"BuiltIn": {
-																					"Symbol": {
-																						"Before": {
-																							"Space": [
-																								" "
-																							]
-																						},
-																						"Value": "*="
+																				"RightArrow": {
+																					"Value": "-\u003e"
+																				},
+																				"Function": {
+																					"Name": "contains",
+																					"OpenParen": {
+																						"Value": "("
 																					},
-																					"Expr": {
-																						"Terminal": {
-																							"Before": {
-																								"Space": [
-																									" "
-																								]
+																					"Params": [
+																						{
+																							"Terminal": {
+																								"Variable": {
+																									"Type": 109
+																								}
+																							}
+																						},
+																						{
+																							"Comma": {
+																								"Value": ","
 																							},
-																							"StringValue": "art"
+																							"Terminal": {
+																								"Before": {
+																									"Space": [
+																										" "
+																									]
+																								},
+																								"StringValue": "art"
+																							}
 																						}
+																					],
+																					"CloseParen": {
+																						"Value": ")"
 																					}
 																				}
 																			}
@@ -469,24 +483,38 @@
 																			"Pattern": {
 																				"LeafNode": {
 																					"Expr": {
-																						"BuiltIn": {
-																							"Symbol": {
-																								"Before": {
-																									"Space": [
-																										" "
-																									]
-																								},
-																								"Value": "$="
+																						"RightArrow": {
+																							"Value": "-\u003e"
+																						},
+																						"Function": {
+																							"Name": "hasSuffix",
+																							"OpenParen": {
+																								"Value": "("
 																							},
-																							"Expr": {
-																								"Terminal": {
-																									"Before": {
-																										"Space": [
-																											" "
-																										]
+																							"Params": [
+																								{
+																									"Terminal": {
+																										"Variable": {
+																											"Type": 109
+																										}
+																									}
+																								},
+																								{
+																									"Comma": {
+																										"Value": ","
 																									},
-																									"StringValue": "omen"
+																									"Terminal": {
+																										"Before": {
+																											"Space": [
+																												" "
+																											]
+																										},
+																										"StringValue": "omen"
+																									}
 																								}
+																							],
+																							"CloseParen": {
+																								"Value": ")"
 																							}
 																						}
 																					}

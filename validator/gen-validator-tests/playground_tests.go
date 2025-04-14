@@ -33,9 +33,9 @@ var playgroundTrueStr = `
 		_ == "Katydids Alive"
 	] &
 	.FeatureRequests._ {
-		Name *= "art";
+		Name->contains($string, "art");
 		*;
-		Anatomy $= "omen";
+		Anatomy->hasSuffix($string, "omen");
 	}
 )
 `
@@ -51,9 +51,9 @@ var playgroundFalseStr = `
 		_ == "Katydids Alive"
 	] &
 	.FeatureRequests._ {
-		Name *= "art";
+		Name->contains($string, "art");
 		*;
-		Anatomy $= "omen";
+		Anatomy->hasSuffix($string, "omen");
 	}
 )
 `

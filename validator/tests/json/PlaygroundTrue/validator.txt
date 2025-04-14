@@ -9,8 +9,8 @@
 		_ == "Katydids Alive"
 	] &
 	.FeatureRequests._ {
-		Name *= "art";
+		Name->contains($string, "art");
 		*;
-		Anatomy $= "omen";
+		Anatomy->hasSuffix($string, "omen");
 	}
 )
