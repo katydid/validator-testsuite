@@ -365,14 +365,26 @@
 																	<Pattern>
 																		<LeafNode>
 																			<Expr>
-																				<BuiltIn>
-																					<Symbol>
-																						<Before>
-																							<Space> </Space>
-																						</Before>
-																						<Value>*=</Value>
-																					</Symbol>
-																					<Expr>
+																				<RightArrow>
+																					<Value>-&gt;</Value>
+																				</RightArrow>
+																				<Function>
+																					<Name>contains</Name>
+																					<OpenParen>
+																						<Value>(</Value>
+																					</OpenParen>
+																					<Params>
+																						<Terminal>
+																							<BytesValue></BytesValue>
+																							<Variable>
+																								<Type>109</Type>
+																							</Variable>
+																						</Terminal>
+																					</Params>
+																					<Params>
+																						<Comma>
+																							<Value>,</Value>
+																						</Comma>
 																						<Terminal>
 																							<Before>
 																								<Space> </Space>
@@ -380,8 +392,11 @@
 																							<StringValue>art</StringValue>
 																							<BytesValue></BytesValue>
 																						</Terminal>
-																					</Expr>
-																				</BuiltIn>
+																					</Params>
+																					<CloseParen>
+																						<Value>)</Value>
+																					</CloseParen>
+																				</Function>
 																			</Expr>
 																		</LeafNode>
 																	</Pattern>
@@ -419,14 +434,26 @@
 																			<Pattern>
 																				<LeafNode>
 																					<Expr>
-																						<BuiltIn>
-																							<Symbol>
-																								<Before>
-																									<Space> </Space>
-																								</Before>
-																								<Value>$=</Value>
-																							</Symbol>
-																							<Expr>
+																						<RightArrow>
+																							<Value>-&gt;</Value>
+																						</RightArrow>
+																						<Function>
+																							<Name>hasSuffix</Name>
+																							<OpenParen>
+																								<Value>(</Value>
+																							</OpenParen>
+																							<Params>
+																								<Terminal>
+																									<BytesValue></BytesValue>
+																									<Variable>
+																										<Type>109</Type>
+																									</Variable>
+																								</Terminal>
+																							</Params>
+																							<Params>
+																								<Comma>
+																									<Value>,</Value>
+																								</Comma>
 																								<Terminal>
 																									<Before>
 																										<Space> </Space>
@@ -434,8 +461,11 @@
 																									<StringValue>omen</StringValue>
 																									<BytesValue></BytesValue>
 																								</Terminal>
-																							</Expr>
-																						</BuiltIn>
+																							</Params>
+																							<CloseParen>
+																								<Value>)</Value>
+																							</CloseParen>
+																						</Function>
 																					</Expr>
 																				</LeafNode>
 																			</Pattern>
