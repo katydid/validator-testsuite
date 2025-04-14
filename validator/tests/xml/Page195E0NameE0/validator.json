@@ -118,14 +118,33 @@
 											"Pattern": {
 												"LeafNode": {
 													"Expr": {
-														"BuiltIn": {
-															"Symbol": {
-																"Value": "~="
+														"RightArrow": {
+															"Value": "-\u003e"
+														},
+														"Function": {
+															"Name": "regex",
+															"OpenParen": {
+																"Value": "("
 															},
-															"Expr": {
-																"Terminal": {
-																	"StringValue": "^([ \t\r\n\u000b\f])+$"
+															"Params": [
+																{
+																	"Terminal": {
+																		"StringValue": "^([ \t\r\n\u000b\f])+$"
+																	}
+																},
+																{
+																	"Comma": {
+																		"Value": ","
+																	},
+																	"Terminal": {
+																		"Variable": {
+																			"Type": 109
+																		}
+																	}
 																}
+															],
+															"CloseParen": {
+																"Value": ")"
 															}
 														}
 													}

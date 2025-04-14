@@ -1,1 +1,1 @@
-[*,FinanceJudo[*,SaladWorry[*,SpyCarpenter[*,BridgePepper:_:*="a",*],*],*],*]
+[*,FinanceJudo[*,SaladWorry[*,SpyCarpenter[*,BridgePepper:_:->contains($string,"a"),*],*],*],*]

@@ -71,17 +71,35 @@
 																					<Pattern>
 																						<LeafNode>
 																							<Expr>
-																								<BuiltIn>
-																									<Symbol>
-																										<Value>*=</Value>
-																									</Symbol>
-																									<Expr>
+																								<RightArrow>
+																									<Value>-&gt;</Value>
+																								</RightArrow>
+																								<Function>
+																									<Name>contains</Name>
+																									<OpenParen>
+																										<Value>(</Value>
+																									</OpenParen>
+																									<Params>
+																										<Terminal>
+																											<BytesValue></BytesValue>
+																											<Variable>
+																												<Type>109</Type>
+																											</Variable>
+																										</Terminal>
+																									</Params>
+																									<Params>
+																										<Comma>
+																											<Value>,</Value>
+																										</Comma>
 																										<Terminal>
 																											<StringValue>a</StringValue>
 																											<BytesValue></BytesValue>
 																										</Terminal>
-																									</Expr>
-																								</BuiltIn>
+																									</Params>
+																									<CloseParen>
+																										<Value>)</Value>
+																									</CloseParen>
+																								</Function>
 																							</Expr>
 																						</LeafNode>
 																					</Pattern>
@@ -152,17 +170,35 @@
 																					<Pattern>
 																						<LeafNode>
 																							<Expr>
-																								<BuiltIn>
-																									<Symbol>
-																										<Value>*=</Value>
-																									</Symbol>
-																									<Expr>
+																								<RightArrow>
+																									<Value>-&gt;</Value>
+																								</RightArrow>
+																								<Function>
+																									<Name>contains</Name>
+																									<OpenParen>
+																										<Value>(</Value>
+																									</OpenParen>
+																									<Params>
+																										<Terminal>
+																											<BytesValue></BytesValue>
+																											<Variable>
+																												<Type>109</Type>
+																											</Variable>
+																										</Terminal>
+																									</Params>
+																									<Params>
+																										<Comma>
+																											<Value>,</Value>
+																										</Comma>
 																										<Terminal>
 																											<StringValue>a</StringValue>
 																											<BytesValue></BytesValue>
 																										</Terminal>
-																									</Expr>
-																								</BuiltIn>
+																									</Params>
+																									<CloseParen>
+																										<Value>)</Value>
+																									</CloseParen>
+																								</Function>
 																							</Expr>
 																						</LeafNode>
 																					</Pattern>
@@ -243,17 +279,35 @@
 																					<Pattern>
 																						<LeafNode>
 																							<Expr>
-																								<BuiltIn>
-																									<Symbol>
-																										<Value>*=</Value>
-																									</Symbol>
-																									<Expr>
+																								<RightArrow>
+																									<Value>-&gt;</Value>
+																								</RightArrow>
+																								<Function>
+																									<Name>contains</Name>
+																									<OpenParen>
+																										<Value>(</Value>
+																									</OpenParen>
+																									<Params>
+																										<Terminal>
+																											<BytesValue></BytesValue>
+																											<Variable>
+																												<Type>109</Type>
+																											</Variable>
+																										</Terminal>
+																									</Params>
+																									<Params>
+																										<Comma>
+																											<Value>,</Value>
+																										</Comma>
 																										<Terminal>
 																											<StringValue>b</StringValue>
 																											<BytesValue></BytesValue>
 																										</Terminal>
-																									</Expr>
-																								</BuiltIn>
+																									</Params>
+																									<CloseParen>
+																										<Value>)</Value>
+																									</CloseParen>
+																								</Function>
 																							</Expr>
 																						</LeafNode>
 																					</Pattern>
@@ -324,17 +378,35 @@
 																					<Pattern>
 																						<LeafNode>
 																							<Expr>
-																								<BuiltIn>
-																									<Symbol>
-																										<Value>*=</Value>
-																									</Symbol>
-																									<Expr>
+																								<RightArrow>
+																									<Value>-&gt;</Value>
+																								</RightArrow>
+																								<Function>
+																									<Name>contains</Name>
+																									<OpenParen>
+																										<Value>(</Value>
+																									</OpenParen>
+																									<Params>
+																										<Terminal>
+																											<BytesValue></BytesValue>
+																											<Variable>
+																												<Type>109</Type>
+																											</Variable>
+																										</Terminal>
+																									</Params>
+																									<Params>
+																										<Comma>
+																											<Value>,</Value>
+																										</Comma>
 																										<Terminal>
 																											<StringValue>b</StringValue>
 																											<BytesValue></BytesValue>
 																										</Terminal>
-																									</Expr>
-																								</BuiltIn>
+																									</Params>
+																									<CloseParen>
+																										<Value>)</Value>
+																									</CloseParen>
+																								</Function>
 																							</Expr>
 																						</LeafNode>
 																					</Pattern>
@@ -420,17 +492,35 @@
 																			<Pattern>
 																				<LeafNode>
 																					<Expr>
-																						<BuiltIn>
-																							<Symbol>
-																								<Value>*=</Value>
-																							</Symbol>
-																							<Expr>
+																						<RightArrow>
+																							<Value>-&gt;</Value>
+																						</RightArrow>
+																						<Function>
+																							<Name>contains</Name>
+																							<OpenParen>
+																								<Value>(</Value>
+																							</OpenParen>
+																							<Params>
+																								<Terminal>
+																									<BytesValue></BytesValue>
+																									<Variable>
+																										<Type>109</Type>
+																									</Variable>
+																								</Terminal>
+																							</Params>
+																							<Params>
+																								<Comma>
+																									<Value>,</Value>
+																								</Comma>
 																								<Terminal>
 																									<StringValue>c</StringValue>
 																									<BytesValue></BytesValue>
 																								</Terminal>
-																							</Expr>
-																						</BuiltIn>
+																							</Params>
+																							<CloseParen>
+																								<Value>)</Value>
+																							</CloseParen>
+																						</Function>
 																					</Expr>
 																				</LeafNode>
 																			</Pattern>
@@ -501,17 +591,35 @@
 																			<Pattern>
 																				<LeafNode>
 																					<Expr>
-																						<BuiltIn>
-																							<Symbol>
-																								<Value>*=</Value>
-																							</Symbol>
-																							<Expr>
+																						<RightArrow>
+																							<Value>-&gt;</Value>
+																						</RightArrow>
+																						<Function>
+																							<Name>contains</Name>
+																							<OpenParen>
+																								<Value>(</Value>
+																							</OpenParen>
+																							<Params>
+																								<Terminal>
+																									<BytesValue></BytesValue>
+																									<Variable>
+																										<Type>109</Type>
+																									</Variable>
+																								</Terminal>
+																							</Params>
+																							<Params>
+																								<Comma>
+																									<Value>,</Value>
+																								</Comma>
 																								<Terminal>
 																									<StringValue>c</StringValue>
 																									<BytesValue></BytesValue>
 																								</Terminal>
-																							</Expr>
-																						</BuiltIn>
+																							</Params>
+																							<CloseParen>
+																								<Value>)</Value>
+																							</CloseParen>
+																						</Function>
 																					</Expr>
 																				</LeafNode>
 																			</Pattern>

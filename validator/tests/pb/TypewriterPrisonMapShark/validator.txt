@@ -1,1 +1,1 @@
-[*,PocketRoses[*,MapShark:*="a",*],*]
+[*,PocketRoses[*,MapShark:->contains($string,"a"),*],*]

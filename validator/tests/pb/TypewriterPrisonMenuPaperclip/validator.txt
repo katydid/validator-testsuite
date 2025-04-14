@@ -1,1 +1,1 @@
-[*,PocketRoses[*,MenuPaperclip[_:*="a",*],*],*]
+[*,PocketRoses[*,MenuPaperclip[_:->contains($string,"a"),*],*],*]

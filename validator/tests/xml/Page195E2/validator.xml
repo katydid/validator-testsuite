@@ -122,17 +122,35 @@
 											<Pattern>
 												<LeafNode>
 													<Expr>
-														<BuiltIn>
-															<Symbol>
-																<Value>~=</Value>
-															</Symbol>
-															<Expr>
+														<RightArrow>
+															<Value>-&gt;</Value>
+														</RightArrow>
+														<Function>
+															<Name>regex</Name>
+															<OpenParen>
+																<Value>(</Value>
+															</OpenParen>
+															<Params>
 																<Terminal>
 																	<StringValue>^([ &#x9;&#xD;&#xA;��])+$</StringValue>
 																	<BytesValue></BytesValue>
 																</Terminal>
-															</Expr>
-														</BuiltIn>
+															</Params>
+															<Params>
+																<Comma>
+																	<Value>,</Value>
+																</Comma>
+																<Terminal>
+																	<BytesValue></BytesValue>
+																	<Variable>
+																		<Type>109</Type>
+																	</Variable>
+																</Terminal>
+															</Params>
+															<CloseParen>
+																<Value>)</Value>
+															</CloseParen>
+														</Function>
 													</Expr>
 												</LeafNode>
 											</Pattern>
