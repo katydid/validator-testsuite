@@ -1,4 +1,4 @@
-module github.com/katydid/testsuite
+module github.com/katydid/validator-testsuite
 
 go 1.24
 
@@ -8,7 +8,7 @@ require (
 	github.com/katydid/parser-go-json v0.2.1
 	github.com/katydid/parser-go-proto v0.2.1
 	github.com/katydid/parser-go-xml v0.1.1
-	github.com/katydid/validator-go v0.5.5
+	github.com/katydid/validator-go v0.6.2
 	google.golang.org/protobuf v1.36.3
 )
 

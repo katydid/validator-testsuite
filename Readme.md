@@ -1,6 +1,6 @@
 # Cross Language Test Suite for Katydid
 
-[![Build Status](https://github.com/katydid/testsuite/actions/workflows/build.yml/badge.svg)](https://github.com/katydid/testsuite/actions)
+[![Build Status](https://github.com/katydid/validator-testsuite/actions/workflows/build.yml/badge.svg)](https://github.com/katydid/validator-testsuite/actions)
 
 The test suite is a language agnostic test suite.
 
@@ -54,7 +54,7 @@ The validator benchmarks are located in the `./validator/benches` folder.
 This folder is not checked in, because of its size.
 Instead this folder can be generated, by running `make regenerate`.
 This will require `go` to be installed and this folder to checked out to
-`$GOPATH/src/github.com/katydid/testsuite`.
+`$GOPATH/src/github.com/katydid/validator-testsuite`.
 
 Benchmarks are grouped by codec: pbnum (no others are provided yet)
 
@@ -156,7 +156,7 @@ syntax = "proto2";
 
 package main;
 
-option go_package = "github.com/katydid/testsuite/validator/gen-validator-tests/main";
+option go_package = "github.com/katydid/validator-testsuite/validator/gen-validator-tests/main";
 
 message MyMessage {
 	optional string MyField = 1;

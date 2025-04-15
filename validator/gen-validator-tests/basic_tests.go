@@ -791,4 +791,18 @@ func init() {
 		"<A><B><C/></B></A>",
 		false,
 	)
+
+	basicRegexName := G{"main": ast.NewTreeNode(ast.NewRegexName(".*B.*"), ast.NewEmpty())}
+	ValidateXMLString(
+		"BasicRegexNameContainsA",
+		basicRegexName,
+		"<ABC/>",
+		true,
+	)
+	ValidateXMLString(
+		"BasicRegexNameDoesNotContainsA",
+		basicRegexName,
+		"<ADC/>",
+		false,
+	)
 }
