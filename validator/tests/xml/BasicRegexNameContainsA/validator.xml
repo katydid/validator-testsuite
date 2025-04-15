@@ -1,0 +1,24 @@
+<Grammar>
+	<TopPattern>
+		<TreeNode>
+			<Name>
+				<RegexName>
+					<Tilde>
+						<Value>~</Value>
+					</Tilde>
+					<Pattern>.*B.*</Pattern>
+				</RegexName>
+			</Name>
+			<Colon>
+				<Value>:</Value>
+			</Colon>
+			<Pattern>
+				<Empty>
+					<Empty>
+						<Value>&lt;empty&gt;</Value>
+					</Empty>
+				</Empty>
+			</Pattern>
+		</TreeNode>
+	</TopPattern>
+</Grammar>

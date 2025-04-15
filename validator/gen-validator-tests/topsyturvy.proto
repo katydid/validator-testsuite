@@ -16,7 +16,7 @@ syntax = "proto2";
 
 package main;
 
-option go_package = "github.com/katydid/testsuite/validator/gen-validator-tests/main";
+option go_package = "github.com/katydid/validator-testsuite/validator/gen-validator-tests/main";
 
 message TopsyTurvy {
 	optional Topsy Top = 1;
