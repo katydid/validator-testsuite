@@ -4,7 +4,7 @@
 
 Results of running the benchmarks from 2016 to 2026 can be found in the [benches](./benches/) folder.
 
-<!-- Instructions for running the testsuite can be found at [katydid/paper-2026-verified-filter-go](https://github.com/katydid/paper-2026-verified-filter-go). -->
+<!-- Instructions for running the testsuite can be found at [katydid/validator-go](https://github.com/katydid/validator-go). -->
 
 The test suite is a language agnostic test and benchmark suite, so that it can be used by multiple implementation languages.
 The test suite contains some Go code to help to generate tests for multiple serialization formats.

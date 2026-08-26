@@ -1,4 +1,4 @@
-module github.com/katydid/paper-2026-verified-filter-testsuite
+module github.com/katydid/validator-testsuite
 
 go 1.24
 
@@ -9,6 +9,7 @@ require (
 	github.com/katydid/parser-go-proto v0.2.1
 	github.com/katydid/parser-go-xml v0.1.1
 	github.com/katydid/validator-go v0.6.4
+	golang.org/x/tools v0.6.0
 	google.golang.org/protobuf v1.36.3
 )
 
