@@ -15,7 +15,7 @@
 package main
 
 import (
-	. "github.com/katydid/validator-go/validator/combinator"
+	. "katydid.org.za/go/validator-go/validator/combinator"
 )
 
 // Foundations of XML Processing: The Tree Automata Approach - Chapter 15.2 Page 194

@@ -22,12 +22,12 @@ import (
 
 	"google.golang.org/protobuf/proto"
 
-	jsonparser "github.com/katydid/parser-go-json/json"
-	protoparser "github.com/katydid/parser-go-proto/proto"
-	xmlparser "github.com/katydid/parser-go-xml/xml"
-	"github.com/katydid/validator-go/validator"
-	"github.com/katydid/validator-go/validator/ast"
-	"github.com/katydid/validator-go/validator/combinator"
+	jsonparser "katydid.org.za/go/parser-go-json/json"
+	protoparser "katydid.org.za/go/parser-go-proto/proto"
+	xmlparser "katydid.org.za/go/parser-go-xml/xml"
+	"katydid.org.za/go/validator-go/validator"
+	"katydid.org.za/go/validator-go/validator/ast"
+	"katydid.org.za/go/validator-go/validator/combinator"
 )
 
 type BenchValidator struct {
@@ -100,13 +100,11 @@ func BenchValidateProto(name string, grammar combinator.G, validProto, invalidPr
 		SchemaName:   schemaName,
 		Extension:    schemaName + ".pb",
 		Validate: func(buf []byte) bool {
-			p, err := protoparser.NewParserWithDesc(packageName, messageName, desc)
+			p, err := protoparser.NewParser(packageName, messageName, protoparser.WithFileDescriptorSet(desc))
 			if err != nil {
 				panic(err)
 			}
-			if err := p.Init(buf); err != nil {
-				panic(err)
-			}
+			p.Init(buf)
 			v, err := validator.Validate(m, p)
 			return v && err == nil
 		},
@@ -139,9 +137,7 @@ func BenchValidateJson(name string, grammar combinator.G, validProto, invalidPro
 		Extension:    "json",
 		Validate: func(buf []byte) bool {
 			p := jsonparser.NewParser()
-			if err := p.Init(buf); err != nil {
-				panic(err)
-			}
+			p.Init(buf)
 			v, err := validator.Validate(m, p)
 			return v && err == nil
 		},
@@ -173,10 +169,8 @@ func BenchValidateXML(name string, grammar combinator.G, validProto, invalidProt
 		InvalidBytes: invalidBytes,
 		Extension:    "xml",
 		Validate: func(buf []byte) bool {
-			p := xmlparser.NewXMLParser()
-			if err := p.Init(buf); err != nil {
-				panic(err)
-			}
+			p := xmlparser.NewParser()
+			p.Init(buf)
 			v, err := validator.Validate(m, p)
 			return v && err == nil
 		},
@@ -209,9 +203,7 @@ func BenchValidateReflect(name string, grammar combinator.G, validProto, invalid
 		Extension:    "goreflect",
 		Validate: func(buf []byte) bool {
 			p := jsonparser.NewParser()
-			if err := p.Init(buf); err != nil {
-				panic(err)
-			}
+			p.Init(buf)
 			v, err := validator.Validate(m, p)
 			return v && err == nil
 		},

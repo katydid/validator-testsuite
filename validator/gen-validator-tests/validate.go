@@ -18,10 +18,10 @@ import (
 	"encoding/json"
 	"encoding/xml"
 
-	"github.com/katydid/validator-go/validator/ast"
-	"github.com/katydid/validator-go/validator/combinator"
 	"google.golang.org/protobuf/proto"
 	descriptor "google.golang.org/protobuf/types/descriptorpb"
+	"katydid.org.za/go/validator-go/validator/ast"
+	"katydid.org.za/go/validator-go/validator/combinator"
 )
 
 type Validator struct {

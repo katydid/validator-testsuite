@@ -17,9 +17,9 @@ package main
 import (
 	"encoding/json"
 
-	"github.com/katydid/validator-go/validator/ast"
-	"github.com/katydid/validator-go/validator/combinator"
-	"github.com/katydid/validator-go/validator/parser"
+	"katydid.org.za/go/validator-go/validator/ast"
+	"katydid.org.za/go/validator-go/validator/combinator"
+	"katydid.org.za/go/validator-go/validator/parser"
 )
 
 var playgroundTrueStr = `

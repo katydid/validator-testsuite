@@ -18,7 +18,7 @@ import (
 	"log"
 	"math/rand"
 
-	. "github.com/katydid/validator-go/validator/combinator"
+	. "katydid.org.za/go/validator-go/validator/combinator"
 )
 
 func RandomValidBridgePepper(r *rand.Rand) ProtoMessage {

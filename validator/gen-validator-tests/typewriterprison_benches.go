@@ -19,8 +19,8 @@ import (
 	"math/rand"
 	"strings"
 
-	. "github.com/katydid/validator-go/validator/combinator"
 	"google.golang.org/protobuf/proto"
+	. "katydid.org.za/go/validator-go/validator/combinator"
 )
 
 func RandomValidTypewriterPrisonScarBusStop(r *rand.Rand) ProtoMessage {

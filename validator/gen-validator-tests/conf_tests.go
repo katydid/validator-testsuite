@@ -15,8 +15,8 @@
 package main
 
 import (
-	. "github.com/katydid/validator-go/validator/combinator"
 	"google.golang.org/protobuf/proto"
+	. "katydid.org.za/go/validator-go/validator/combinator"
 )
 
 var ConfIsIn2026 = G{"main": InPath("Due", InPath("Year", Value(Eq(StringVar(), StringConst("2026")))))}
