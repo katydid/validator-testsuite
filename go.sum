@@ -14,7 +14,7 @@ katydid.org.za/go/parser-go-proto v0.5.0 h1:odb3FyYxZujtCPmnzy4VzkA+nbfLuSjQ9dmy
 katydid.org.za/go/parser-go-proto v0.5.0/go.mod h1:27FWfyNV922PkWdXPyWR2tkXDtL3TYwIa409Qoco1WY=
 katydid.org.za/go/parser-go-reflect v0.5.0 h1:1ak4VLmMVtQj32+T48/qd5Euts8Gf5P/k7IXY+ahNUM=
 katydid.org.za/go/parser-go-reflect v0.5.0/go.mod h1:4ge7AH/LiVlEjR+Lz7yLnmTZL5DNxk6n5LoVhQnnMoU=
-katydid.org.za/go/parser-go-xml v0.2.0 h1:I2tvxZImmqPRKKs226kHUQUI3XZ1KSwqOo5nSf0dAes=
-katydid.org.za/go/parser-go-xml v0.2.0/go.mod h1:NCbXLEM2tr4f5mb0Z97aBrq7V2PzS+ajaZUkaqstZ5s=
-katydid.org.za/go/validator-go v0.8.1 h1:zUup4eB+X/50VLiFrv9xbzS1ZHmcS47EzVLShYGnP44=
-katydid.org.za/go/validator-go v0.8.1/go.mod h1:js6q11gPmpPfuGhR8B70COnZhTPfPueMfVjh4pa9DPo=
+katydid.org.za/go/parser-go-xml v0.2.1 h1:HNSoteQ0jCosycqsMj9RdieSU8hfxOyPbiKtE0KiRKI=
+katydid.org.za/go/parser-go-xml v0.2.1/go.mod h1:NCbXLEM2tr4f5mb0Z97aBrq7V2PzS+ajaZUkaqstZ5s=
+katydid.org.za/go/validator-go v0.8.2 h1:OO+00Ex/IF5ZN1aSIXbQNrfOiQJ+fBdT80vXizdZkYw=
+katydid.org.za/go/validator-go v0.8.2/go.mod h1:yWqLTRTPlZfPQkRQTFLSzi2eqk5LPH7dS93HG9xT7PE=
