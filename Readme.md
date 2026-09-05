@@ -2,15 +2,43 @@
 
 [![Build Status](https://git.katydid.org.za/validator-testsuite/actions/workflows/build.yml/badge.svg)](https://git.katydid.org.za/validator-testsuite/actions)
 
+This is a language agnostic test and benchmark suite, which can be used by multiple implementation languages.
+
 Results of running the benchmarks from 2016 to 2026 can be found in the [benches](./benches/) folder.
 
-<!-- Instructions for running the testsuite can be found at [katydid/validator-go](https://git.katydid.org.za/validator-go). -->
+Even though the project contains some Go code, it is only there to help to generate tests and benchmarks.
+The output is a set of files and folders that can be read by any programming language.
 
-The test suite is a language agnostic test and benchmark suite, so that it can be used by multiple implementation languages.
-The test suite contains some Go code to help to generate tests for multiple serialization formats.
-The output is just a bunch of files and folders that can be read by any programming language.
+## Setup
 
-<!-- This repo was originally based [katydid/validator-testsuite](https://git.katydid.org.za/validator-testsuite/commit/565d7259b4a086251c11862a68b5619f731156bb), which explains how to add more tests and benchmarks. -->
+1. Install [Go](https://golang.org) version 1.26.3, which can be downloaded [here](https://go.dev/dl/) for [Mac](https://go.dev/dl/go1.26.3.darwin-arm64.pkg) or [Linux](https://go.dev/dl/go1.26.3.linux-amd64.tar.gz).
+
+2. Install protoc version 29.3 by [downloading](https://github.com/protocolbuffers/protobuf/releases/download/v29.3/protoc-29.3-linux-x86_64.zip) it from [Protobuf releases](https://github.com/protocolbuffers/protobuf/releases) and placing the `protoc` binary in your `PATH`.
+
+3. Clone this repo to `./src/katydid.org.za/go/validator-testsuite`:
+
+```
+mkdir -p ./src/katydid.org.za/go/
+(cd ./src/katydid.org.za/go/ && git clone https://git.katydid.org.za/validator-testsuite)
+```
+
+4. Generate benchmarks by going to your cloned testsuite `./src/katydid.org.za/go/validator-testsuite` and chose how much you want to generate by either running:
+
+* `(cd ./src/katydid.org.za/go/validator-testsuite && make regenerate-paper-benchmarks)` to only generate the benchmarks for the paper or
+* `(cd ./src/katydid.org.za/go/validator-testsuite && make regenerate-all)` to generate a bigger variety benchmarks.
+
+This can take a few minutes.
+
+5. Choose an implementation to benchmark and clone it:
+
+```
+(cd ./src/katydid.org.za/go/ && git clone https://git.katydid.org.za/validator-go-proto)
+```
+
+6. Go to your implementation and choose how much benchmarks you want to run by either running:
+
+* `(cd ./src/katydid.org.za/go/validator-go && make paper_benchmarks)` to only run the benchmarks mentioned in the paper or
+* `(cd ./src/katydid.org.za/go/validator-go && make bench)` to run a bigger variety the benchmarks.
 
 ## Tests
 

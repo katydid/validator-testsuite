@@ -13,7 +13,7 @@ jobs:
     - name: Setup Go
       uses: actions/setup-go@v3
       with:
-        go-version: 1.24
+        go-version: 1.26.3
     - name: Fetch dependencies
       run: |
         cd gopath/katydid.org.za/go/validator-testsuite
