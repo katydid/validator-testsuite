@@ -42,6 +42,21 @@ This can take a few minutes.
 * `(cd ./src/katydid.org.za/go/validator-go && make bench)` to run a bigger variety of benchmarks for the XML, JSON and Reflect.
 * `(cd ./src/katydid.org.za/go/validator-go && make test)` to tun the Go tests for the XML, JSON and Reflect.
 
+7. (Optional) Record results in this repo
+
+Create a markdown file in `./src/katydid.org.za/go/validator-testsuite/benches/<date>-<validator-repo-name>.md`
+
+Add a heading with the date.
+
+Copy the revision numbers for the implementation repo and testsuite: 
+
+```
+(cd ./src/katydid.org.za/go/validator-go-proto && git rev-parse HEAD)
+(cd ./src/katydid.org.za/go/validator-testsuite && git rev-parse HEAD)
+```
+
+Copy the output of running the benchmarks.
+
 ## Tests
 
 The validator tests are located in the `./validator/tests` folder.
