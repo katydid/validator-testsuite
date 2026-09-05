@@ -25,20 +25,22 @@ mkdir -p ./src/katydid.org.za/go/
 4. Generate benchmarks by going to your cloned testsuite `./src/katydid.org.za/go/validator-testsuite` and chose how much you want to generate by either running:
 
 * `(cd ./src/katydid.org.za/go/validator-testsuite && make regenerate-paper-benchmarks)` to only generate the benchmarks for the paper or
-* `(cd ./src/katydid.org.za/go/validator-testsuite && make regenerate-all)` to generate a bigger variety benchmarks.
+* `(cd ./src/katydid.org.za/go/validator-testsuite && make regenerate-all)` to generate a bigger variety of benchmarks.
 
 This can take a few minutes.
 
 5. Choose an implementation to benchmark and clone it:
 
-```
-(cd ./src/katydid.org.za/go/ && git clone https://git.katydid.org.za/validator-go-proto)
-```
+* The Go protobuf implementation: `(cd ./src/katydid.org.za/go/ && git clone https://git.katydid.org.za/validator-go-proto)` 
+* The Go JSON/XML/Reflect implementation: `(cd ./src/katydid.org.za/go/ && git clone https://git.katydid.org.za/validator-go)`
 
-6. Go to your implementation and choose how much benchmarks you want to run by either running:
+6. Go to your implementation and choose how much benchmarks or tests you want to run by either running:
 
-* `(cd ./src/katydid.org.za/go/validator-go-proto && make paper_benchmarks)` to only run the benchmarks mentioned in the paper or
-* `(cd ./src/katydid.org.za/go/validator-go-proto && make bench)` to run a bigger variety the benchmarks.
+* `(cd ./src/katydid.org.za/go/validator-go-proto && make paper_benchmarks)` to only run the benchmarks for the paper or
+* `(cd ./src/katydid.org.za/go/validator-go-proto && make bench)` to run a bigger variety of benchmarks on Protocol Buffers and JSON.
+* `(cd ./src/katydid.org.za/go/validator-go-proto && make test)` to tun the Go tests for the Protocol Buffers and JSON.
+* `(cd ./src/katydid.org.za/go/validator-go && make bench)` to run a bigger variety of benchmarks for the XML, JSON and Reflect.
+* `(cd ./src/katydid.org.za/go/validator-go && make test)` to tun the Go tests for the XML, JSON and Reflect.
 
 ## Tests
 
