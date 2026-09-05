@@ -37,8 +37,8 @@ This can take a few minutes.
 
 6. Go to your implementation and choose how much benchmarks you want to run by either running:
 
-* `(cd ./src/katydid.org.za/go/validator-go && make paper_benchmarks)` to only run the benchmarks mentioned in the paper or
-* `(cd ./src/katydid.org.za/go/validator-go && make bench)` to run a bigger variety the benchmarks.
+* `(cd ./src/katydid.org.za/go/validator-go-proto && make paper_benchmarks)` to only run the benchmarks mentioned in the paper or
+* `(cd ./src/katydid.org.za/go/validator-go-proto && make bench)` to run a bigger variety the benchmarks.
 
 ## Tests
 
