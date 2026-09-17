@@ -52,11 +52,11 @@ func main() {
 		if !strings.Contains(v.Name, "Larger") {
 			writeFile(
 				filepath.Join(folder, "validator.json"),
-				mustBytes(json.MarshalIndent(v.Grammar, "", "\t")),
+				must(json.MarshalIndent(v.Grammar, "", "\t")),
 			)
 			writeFile(
 				filepath.Join(folder, "validator.xml"),
-				mustBytes(xml.MarshalIndent(v.Grammar, "", "\t")),
+				must(xml.MarshalIndent(v.Grammar, "", "\t")),
 			)
 		}
 
@@ -96,12 +96,12 @@ func main() {
 
 		writeFile(
 			filepath.Join(folder, "validator.json"),
-			mustBytes(json.MarshalIndent(v.Grammar, "", "\t")),
+			must(json.MarshalIndent(v.Grammar, "", "\t")),
 		)
 
 		writeFile(
 			filepath.Join(folder, "validator.xml"),
-			mustBytes(xml.MarshalIndent(v.Grammar, "", "\t")),
+			must(xml.MarshalIndent(v.Grammar, "", "\t")),
 		)
 
 		r := rand.New(rand.NewSource(*seed))

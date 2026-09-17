@@ -8,6 +8,10 @@ google.golang.org/protobuf v1.36.3 h1:82DV7MYdb8anAVi3qge1wSnMDrnKK7ebr+I0hHRN1B
 google.golang.org/protobuf v1.36.3/go.mod h1:9fA7Ob0pmnwhb644+1+CVWFRbNajQ6iRojtC/QF5bRE=
 katydid.org.za/go/parser-go v0.11.0 h1:QRK3NmMBVbJwBh03XWnh9dD8vLtmW4uqVwLSYaeIres=
 katydid.org.za/go/parser-go v0.11.0/go.mod h1:e1ZTtXTE/kBuCQ9mQKz4/POfyAj1bHHJdVG75BvDjo0=
+katydid.org.za/go/parser-go v0.11.2-0.20260913155852-17c07c7083a4 h1:XJUFmAqXTi4RotZ54JDZx90aO7RCIoM9ua016od1M+c=
+katydid.org.za/go/parser-go v0.11.2-0.20260913155852-17c07c7083a4/go.mod h1:e1ZTtXTE/kBuCQ9mQKz4/POfyAj1bHHJdVG75BvDjo0=
+katydid.org.za/go/parser-go v0.11.2-0.20260914084018-446dd1655b3a h1:Q9YduxNure77Fviu9WBeMbERBXe+nwWo5emr/NI7w5o=
+katydid.org.za/go/parser-go v0.11.2-0.20260914084018-446dd1655b3a/go.mod h1:e1ZTtXTE/kBuCQ9mQKz4/POfyAj1bHHJdVG75BvDjo0=
 katydid.org.za/go/parser-go-json v0.8.0 h1:K2BQEjd/nckI5p5PQD8rBn+4y6TRSFHWeR94CVLNOtE=
 katydid.org.za/go/parser-go-json v0.8.0/go.mod h1:Ud7fvriMPPdhAYRnf+rJct8IwZ1H0U0hEJBK3qHZnkI=
 katydid.org.za/go/parser-go-proto v0.5.0 h1:odb3FyYxZujtCPmnzy4VzkA+nbfLuSjQ9dmycJQ0KvA=

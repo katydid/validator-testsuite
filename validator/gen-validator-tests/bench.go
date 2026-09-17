@@ -78,11 +78,11 @@ func BenchValidateProto(name string, grammar combinator.G, validProto, invalidPr
 	g := grammar.Grammar()
 	validBytes := func(r *rand.Rand) []byte {
 		pb := validProto(r)
-		return mustBytes(proto.Marshal(pb))
+		return must(proto.Marshal(pb))
 	}
 	invalidBytes := func(r *rand.Rand) []byte {
 		pb := invalidProto(r)
-		return mustBytes(proto.Marshal(pb))
+		return must(proto.Marshal(pb))
 	}
 	schemaName := registerProto(msg)
 
@@ -116,11 +116,11 @@ func BenchValidateJson(name string, grammar combinator.G, validProto, invalidPro
 	g := grammar.Grammar()
 	validBytes := func(r *rand.Rand) []byte {
 		pb := validProto(r)
-		return mustBytes(json.Marshal(pb))
+		return must(json.Marshal(pb))
 	}
 	invalidBytes := func(r *rand.Rand) []byte {
 		pb := invalidProto(r)
-		return mustBytes(json.Marshal(pb))
+		return must(json.Marshal(pb))
 	}
 
 	m, err := validator.Prepare(g)
@@ -149,11 +149,11 @@ func BenchValidateXML(name string, grammar combinator.G, validProto, invalidProt
 	g := grammar.Grammar()
 	validBytes := func(r *rand.Rand) []byte {
 		pb := validProto(r)
-		return mustBytes(xml.Marshal(pb))
+		return must(xml.Marshal(pb))
 	}
 	invalidBytes := func(r *rand.Rand) []byte {
 		pb := invalidProto(r)
-		return mustBytes(xml.Marshal(pb))
+		return must(xml.Marshal(pb))
 	}
 
 	m, err := validator.Prepare(g)
@@ -182,11 +182,11 @@ func BenchValidateReflect(name string, grammar combinator.G, validProto, invalid
 	g := grammar.Grammar()
 	validBytes := func(r *rand.Rand) []byte {
 		pb := validProto(r)
-		return mustBytes(json.Marshal(pb))
+		return must(json.Marshal(pb))
 	}
 	invalidBytes := func(r *rand.Rand) []byte {
 		pb := invalidProto(r)
-		return mustBytes(json.Marshal(pb))
+		return must(json.Marshal(pb))
 	}
 
 	m, err := validator.Prepare(g)

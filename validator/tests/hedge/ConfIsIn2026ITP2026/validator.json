@@ -1,0 +1,56 @@
+{
+	"TopPattern": {
+		"Contains": {
+			"Dot": {
+				"Value": "."
+			},
+			"Pattern": {
+				"TreeNode": {
+					"Name": {
+						"Name": {
+							"StringValue": "Due"
+						}
+					},
+					"Colon": {
+						"Value": ":"
+					},
+					"Pattern": {
+						"Contains": {
+							"Dot": {
+								"Value": "."
+							},
+							"Pattern": {
+								"TreeNode": {
+									"Name": {
+										"Name": {
+											"StringValue": "Year"
+										}
+									},
+									"Colon": {
+										"Value": ":"
+									},
+									"Pattern": {
+										"LeafNode": {
+											"Expr": {
+												"BuiltIn": {
+													"Symbol": {
+														"Value": "=="
+													},
+													"Expr": {
+														"Terminal": {
+															"StringValue": "2026"
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

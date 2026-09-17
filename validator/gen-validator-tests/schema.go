@@ -44,7 +44,7 @@ func registerProto(m ProtoMessage) string {
 		return schemaName
 	}
 	desc := m.(ProtoMessage).Description()
-	descBytes := mustBytes(proto.Marshal(desc))
+	descBytes := must(proto.Marshal(desc))
 	Schemas[schemaName] = ProtoDesc{
 		PackageName: packageName,
 		MessageName: messageName,

@@ -1,0 +1,37 @@
+{
+	"TopPattern": {
+		"Contains": {
+			"Dot": {
+				"Value": "."
+			},
+			"Pattern": {
+				"TreeNode": {
+					"Name": {
+						"Name": {
+							"StringValue": "Category"
+						}
+					},
+					"Colon": {
+						"Value": ":"
+					},
+					"Pattern": {
+						"LeafNode": {
+							"Expr": {
+								"BuiltIn": {
+									"Symbol": {
+										"Value": "=="
+									},
+									"Expr": {
+										"Terminal": {
+											"StringValue": "Computer Science"
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -15,5 +15,5 @@ require (
 
 require (
 	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1 // indirect
-	katydid.org.za/go/parser-go v0.11.0 // indirect
+	katydid.org.za/go/parser-go v0.11.2-0.20260914084018-446dd1655b3a // indirect
 )

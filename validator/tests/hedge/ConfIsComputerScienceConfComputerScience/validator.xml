@@ -1,0 +1,39 @@
+<Grammar>
+	<TopPattern>
+		<Contains>
+			<Dot>
+				<Value>.</Value>
+			</Dot>
+			<Pattern>
+				<TreeNode>
+					<Name>
+						<Name>
+							<StringValue>Category</StringValue>
+							<BytesValue></BytesValue>
+						</Name>
+					</Name>
+					<Colon>
+						<Value>:</Value>
+					</Colon>
+					<Pattern>
+						<LeafNode>
+							<Expr>
+								<BuiltIn>
+									<Symbol>
+										<Value>==</Value>
+									</Symbol>
+									<Expr>
+										<Terminal>
+											<StringValue>Computer Science</StringValue>
+											<BytesValue></BytesValue>
+										</Terminal>
+									</Expr>
+								</BuiltIn>
+							</Expr>
+						</LeafNode>
+					</Pattern>
+				</TreeNode>
+			</Pattern>
+		</Contains>
+	</TopPattern>
+</Grammar>

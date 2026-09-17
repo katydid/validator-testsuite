@@ -20,6 +20,9 @@ import (
 
 	"google.golang.org/protobuf/proto"
 	descriptor "google.golang.org/protobuf/types/descriptorpb"
+	jsonparser "katydid.org.za/go/parser-go-json/json"
+	xmlparser "katydid.org.za/go/parser-go-xml/xml"
+	"katydid.org.za/go/parser-go/hedge"
 	"katydid.org.za/go/validator-go/validator/ast"
 	"katydid.org.za/go/validator-go/validator/combinator"
 )
@@ -71,7 +74,7 @@ func ValidateProto(name string, g combinator.G, m ProtoMessage, expected bool) {
 		CodecName:  "pb",
 		Grammar:    g.Grammar(),
 		Expected:   expected,
-		Bytes:      mustBytes(proto.Marshal(m)),
+		Bytes:      must(proto.Marshal(m)),
 		SchemaName: schemaName,
 		Extension:  schemaName + ".pb",
 	})
@@ -79,6 +82,7 @@ func ValidateProto(name string, g combinator.G, m ProtoMessage, expected bool) {
 
 func ValidateJsonString(name string, g combinator.G, s string, expected bool) {
 	checkDuplicates(name, "json")
+	ValidateJSONHedge(name, g, s, expected)
 	Validators = append(Validators, Validator{
 		Name:      name,
 		CodecName: "json",
@@ -89,32 +93,34 @@ func ValidateJsonString(name string, g combinator.G, s string, expected bool) {
 	})
 }
 
-func ValidateJson(name string, g combinator.G, m interface{}, expected bool) {
+func ValidateJson(name string, g combinator.G, m any, expected bool) {
 	checkDuplicates(name, "json")
+	ValidateJSONHedge(name, g, string(must(json.MarshalIndent(m, "", "\t"))), expected)
 	Validators = append(Validators, Validator{
 		Name:      name,
 		CodecName: "json",
 		Grammar:   g.Grammar(),
 		Expected:  expected,
-		Bytes:     mustBytes(json.MarshalIndent(m, "", "\t")),
+		Bytes:     must(json.MarshalIndent(m, "", "\t")),
 		Extension: "json",
 	})
 }
 
-func ValidateReflect(name string, g combinator.G, m interface{}, expected bool) {
+func ValidateReflect(name string, g combinator.G, m any, expected bool) {
 	checkDuplicates(name, "goreflect")
 	Validators = append(Validators, Validator{
 		Name:      name,
 		CodecName: "goreflect",
 		Grammar:   g.Grammar(),
 		Expected:  expected,
-		Bytes:     mustBytes(json.MarshalIndent(m, "", "\t")),
+		Bytes:     must(json.MarshalIndent(m, "", "\t")),
 		Extension: "goreflect",
 	})
 }
 
 func ValidateXMLString(name string, g combinator.G, s string, expected bool) {
 	checkDuplicates(name, "xml")
+	ValidateXMLHedge(name, g, s, expected)
 	Validators = append(Validators, Validator{
 		Name:      name,
 		CodecName: "xml",
@@ -125,19 +131,58 @@ func ValidateXMLString(name string, g combinator.G, s string, expected bool) {
 	})
 }
 
-func ValidateXML(name string, g combinator.G, m interface{}, expected bool) {
+func ValidateXML(name string, g combinator.G, m any, expected bool) {
 	checkDuplicates(name, "xml")
+	ValidateXMLHedge(name, g, string(must(xml.MarshalIndent(m, "", "\t"))), expected)
 	Validators = append(Validators, Validator{
 		Name:      name,
 		CodecName: "xml",
 		Grammar:   g.Grammar(),
 		Expected:  expected,
-		Bytes:     mustBytes(xml.MarshalIndent(m, "", "\t")),
+		Bytes:     must(xml.MarshalIndent(m, "", "\t")),
 		Extension: "xml",
 	})
 }
 
-func mustBytes(bs []byte, err error) []byte {
+func ValidateJSONHedge(name string, g combinator.G, s string, expected bool) {
+	checkDuplicates(name, "hedge")
+	p := jsonparser.NewParser()
+	p.Init([]byte(s))
+	h, err := hedge.ParseInto(p)
+	if err != nil {
+		panic(err)
+	}
+	data := must(json.Marshal(h))
+	Validators = append(Validators, Validator{
+		Name:      name,
+		CodecName: "hedge",
+		Grammar:   g.Grammar(),
+		Expected:  expected,
+		Bytes:     data,
+		Extension: "hedge",
+	})
+}
+
+func ValidateXMLHedge(name string, g combinator.G, s string, expected bool) {
+	checkDuplicates(name, "hedge")
+	p := xmlparser.NewParser()
+	p.Init([]byte(s))
+	h, err := hedge.ParseInto(p)
+	if err != nil {
+		panic(err)
+	}
+	data := must(json.Marshal(h))
+	Validators = append(Validators, Validator{
+		Name:      name,
+		CodecName: "hedge",
+		Grammar:   g.Grammar(),
+		Expected:  expected,
+		Bytes:     data,
+		Extension: "hedge",
+	})
+}
+
+func must[A any](bs A, err error) A {
 	if err != nil {
 		panic(err)
 	}
