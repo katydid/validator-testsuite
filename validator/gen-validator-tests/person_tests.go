@@ -16,6 +16,7 @@ package main
 
 import (
 	"google.golang.org/protobuf/proto"
+	"katydid.org.za/go/validator-go/validator/ast"
 	. "katydid.org.za/go/validator-go/validator/combinator"
 )
 
@@ -430,4 +431,54 @@ func init() {
 	ValidateJsonProto("OptionalAddressRobertPerson", OptionalAddress, RobertPerson, true)
 	ValidateJsonProto("OptionalAddressDavidPerson", OptionalAddress, DavidPerson, true)
 	ValidateJsonProto("OptionalAddressMoverPerson", OptionalAddress, MoverPerson, false)
+}
+
+var NameNameChoice = G{"main": ast.NewContains(ast.NewTreeNode(ast.NewNameChoice(ast.NewStringName("Name"), ast.NewStringName("FirstName")),
+	Value(Eq(StringVar(), StringConst("David"))),
+))}
+
+func init() {
+	ValidateJsonProto("NameNameChoiceRobertPerson", NameNameChoice, RobertPerson, false)
+	ValidateJsonProto("NameNameChoiceDavidPerson", NameNameChoice, DavidPerson, true)
+}
+
+var NameNameConj = G{"main": ast.NewContains(ast.NewTreeNode(ast.NewNameConj(ast.NewStringName("Name"), ast.NewAnyName()),
+	Value(Eq(StringVar(), StringConst("David"))),
+))}
+
+func init() {
+	ValidateJsonProto("NameNameConjRobertPerson", NameNameConj, RobertPerson, false)
+	ValidateJsonProto("NameNameConjDavidPerson", NameNameConj, DavidPerson, true)
+}
+
+var XorPerson = G{"main": ast.NewXor(
+	InPath("Name", Value(Eq(StringVar(), StringConst("David")))),
+	InPath("Telephone", Value(Eq(StringVar(), StringConst("0123456789")))),
+)}
+
+func init() {
+	ValidateJsonProto("XorPersonMoverPerson", XorPerson, MoverPerson, true)
+	ValidateJsonProto("XorPersonDavidPerson", XorPerson, DavidPerson, false)
+}
+
+var XorInSameName = G{"main": ast.NewXor(
+	InPath("Name", Value(Eq(StringVar(), StringConst("David")))),
+	InPath("Name", Value(Eq(StringVar(), StringConst("Robert")))),
+)}
+
+func init() {
+	ValidateJsonProto("XorInRobertPerson", XorInSameName, RobertPerson, true)
+	ValidateJsonProto("XorInDavidPerson", XorInSameName, DavidPerson, true)
+	ValidateJsonProto("XorInMoverPerson", XorInSameName, MoverPerson, false)
+}
+
+var XorSameName = G{"main": ast.NewContains(ast.NewXor(
+	In("Name", Value(Eq(StringVar(), StringConst("David")))),
+	In("Name", Value(Eq(StringVar(), StringConst("Robert")))),
+))}
+
+func init() {
+	ValidateJsonProto("XorRobertPerson", XorSameName, RobertPerson, true)
+	ValidateJsonProto("XorDavidPerson", XorSameName, DavidPerson, true)
+	ValidateJsonProto("XorMoverPerson", XorSameName, MoverPerson, false)
 }
