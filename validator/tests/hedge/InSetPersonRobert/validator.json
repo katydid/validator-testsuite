@@ -1,0 +1,85 @@
+{
+	"TopPattern": {
+		"Contains": {
+			"Dot": {
+				"Value": "."
+			},
+			"Pattern": {
+				"TreeNode": {
+					"Name": {
+						"Name": {
+							"StringValue": "Name"
+						}
+					},
+					"Colon": {
+						"Value": ":"
+					},
+					"Pattern": {
+						"LeafNode": {
+							"Expr": {
+								"RightArrow": {
+									"Value": "-\u003e"
+								},
+								"Function": {
+									"Name": "contains",
+									"OpenParen": {
+										"Value": "("
+									},
+									"Params": [
+										{
+											"Terminal": {
+												"Variable": {
+													"Type": 109
+												}
+											}
+										},
+										{
+											"Comma": {
+												"Value": ","
+											},
+											"List": {
+												"Type": 209,
+												"OpenCurly": {
+													"Value": "{"
+												},
+												"Elems": [
+													{
+														"Terminal": {
+															"StringValue": "The"
+														}
+													},
+													{
+														"Comma": {
+															"Value": ","
+														},
+														"Terminal": {
+															"StringValue": "Robert"
+														}
+													},
+													{
+														"Comma": {
+															"Value": ","
+														},
+														"Terminal": {
+															"StringValue": "Smith"
+														}
+													}
+												],
+												"CloseCurly": {
+													"Value": "}"
+												}
+											}
+										}
+									],
+									"CloseParen": {
+										"Value": ")"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

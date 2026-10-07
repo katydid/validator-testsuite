@@ -1,0 +1,219 @@
+{
+	"TopPattern": {
+		"Interleave": {
+			"OpenCurly": {
+				"Value": "{"
+			},
+			"LeftPattern": {
+				"TreeNode": {
+					"Name": {
+						"Name": {
+							"StringValue": "Due"
+						}
+					},
+					"Colon": {
+						"Value": ":"
+					},
+					"Pattern": {
+						"Or": {
+							"OpenParen": {
+								"Value": "("
+							},
+							"LeftPattern": {
+								"Contains": {
+									"Dot": {
+										"Value": "."
+									},
+									"Pattern": {
+										"TreeNode": {
+											"Name": {
+												"Name": {
+													"StringValue": "Year"
+												}
+											},
+											"Colon": {
+												"Value": ":"
+											},
+											"Pattern": {
+												"LeafNode": {
+													"Expr": {
+														"BuiltIn": {
+															"Symbol": {
+																"Value": "=="
+															},
+															"Expr": {
+																"Terminal": {
+																	"StringValue": "2026"
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							},
+							"Pipe": {
+								"Value": "|"
+							},
+							"RightPattern": {
+								"And": {
+									"OpenParen": {
+										"Value": "("
+									},
+									"LeftPattern": {
+										"Contains": {
+											"Dot": {
+												"Value": "."
+											},
+											"Pattern": {
+												"TreeNode": {
+													"Name": {
+														"Name": {
+															"StringValue": "Year"
+														}
+													},
+													"Colon": {
+														"Value": ":"
+													},
+													"Pattern": {
+														"LeafNode": {
+															"Expr": {
+																"BuiltIn": {
+																	"Symbol": {
+																		"Value": "=="
+																	},
+																	"Expr": {
+																		"Terminal": {
+																			"StringValue": "2025"
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									},
+									"Ampersand": {
+										"Value": "\u0026"
+									},
+									"RightPattern": {
+										"Contains": {
+											"Dot": {
+												"Value": "."
+											},
+											"Pattern": {
+												"TreeNode": {
+													"Name": {
+														"Name": {
+															"StringValue": "Month"
+														}
+													},
+													"Colon": {
+														"Value": ":"
+													},
+													"Pattern": {
+														"LeafNode": {
+															"Expr": {
+																"BuiltIn": {
+																	"Symbol": {
+																		"Value": "\u003e="
+																	},
+																	"Expr": {
+																		"Terminal": {
+																			"StringValue": "10"
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									},
+									"CloseParen": {
+										"Value": ")"
+									}
+								}
+							},
+							"CloseParen": {
+								"Value": ")"
+							}
+						}
+					}
+				}
+			},
+			"SemiColon": {
+				"Value": ";"
+			},
+			"RightPattern": {
+				"Interleave": {
+					"LeftPattern": {
+						"TreeNode": {
+							"Name": {
+								"Name": {
+									"StringValue": "Loc"
+								}
+							},
+							"Colon": {
+								"Value": ":"
+							},
+							"Pattern": {
+								"Contains": {
+									"Dot": {
+										"Value": "."
+									},
+									"Pattern": {
+										"TreeNode": {
+											"Name": {
+												"Name": {
+													"StringValue": "Cont"
+												}
+											},
+											"Colon": {
+												"Value": ":"
+											},
+											"Pattern": {
+												"LeafNode": {
+													"Expr": {
+														"BuiltIn": {
+															"Symbol": {
+																"Value": "=="
+															},
+															"Expr": {
+																"Terminal": {
+																	"StringValue": "EU"
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					},
+					"SemiColon": {
+						"Value": ";"
+					},
+					"RightPattern": {
+						"ZAny": {
+							"Star": {
+								"Value": "*"
+							}
+						}
+					}
+				}
+			},
+			"CloseCurly": {
+				"Value": "}"
+			}
+		}
+	}
+}

@@ -1,0 +1,32 @@
+<Grammar>
+	<TopPattern>
+		<TreeNode>
+			<Name>
+				<Name>
+					<StringValue>A</StringValue>
+					<BytesValue></BytesValue>
+				</Name>
+			</Name>
+			<Colon>
+				<Value>:</Value>
+			</Colon>
+			<Pattern>
+				<LeafNode>
+					<Expr>
+						<BuiltIn>
+							<Symbol>
+								<Value>==</Value>
+							</Symbol>
+							<Expr>
+								<Terminal>
+									<StringValue>B</StringValue>
+									<BytesValue></BytesValue>
+								</Terminal>
+							</Expr>
+						</BuiltIn>
+					</Expr>
+				</LeafNode>
+			</Pattern>
+		</TreeNode>
+	</TopPattern>
+</Grammar>

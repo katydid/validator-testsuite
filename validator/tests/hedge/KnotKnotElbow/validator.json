@@ -1,0 +1,58 @@
+{
+	"TopPattern": {
+		"TreeNode": {
+			"Name": {
+				"AnyName": {
+					"Underscore": {
+						"Value": "_"
+					}
+				}
+			},
+			"Colon": {
+				"Value": ":"
+			},
+			"Pattern": {
+				"TreeNode": {
+					"Name": {
+						"AnyName": {
+							"Underscore": {
+								"Value": "_"
+							}
+						}
+					},
+					"Colon": {
+						"Value": ":"
+					},
+					"Pattern": {
+						"TreeNode": {
+							"Name": {
+								"Name": {
+									"StringValue": "Elbow"
+								}
+							},
+							"Colon": {
+								"Value": ":"
+							},
+							"Pattern": {
+								"LeafNode": {
+									"Expr": {
+										"BuiltIn": {
+											"Symbol": {
+												"Value": "=="
+											},
+											"Expr": {
+												"Terminal": {
+													"BoolValue": true
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

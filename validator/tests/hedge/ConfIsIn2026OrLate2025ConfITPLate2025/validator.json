@@ -1,0 +1,152 @@
+{
+	"TopPattern": {
+		"Contains": {
+			"Dot": {
+				"Value": "."
+			},
+			"Pattern": {
+				"TreeNode": {
+					"Name": {
+						"Name": {
+							"StringValue": "Due"
+						}
+					},
+					"Colon": {
+						"Value": ":"
+					},
+					"Pattern": {
+						"Or": {
+							"OpenParen": {
+								"Value": "("
+							},
+							"LeftPattern": {
+								"Contains": {
+									"Dot": {
+										"Value": "."
+									},
+									"Pattern": {
+										"TreeNode": {
+											"Name": {
+												"Name": {
+													"StringValue": "Year"
+												}
+											},
+											"Colon": {
+												"Value": ":"
+											},
+											"Pattern": {
+												"LeafNode": {
+													"Expr": {
+														"BuiltIn": {
+															"Symbol": {
+																"Value": "=="
+															},
+															"Expr": {
+																"Terminal": {
+																	"StringValue": "2026"
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							},
+							"Pipe": {
+								"Value": "|"
+							},
+							"RightPattern": {
+								"And": {
+									"OpenParen": {
+										"Value": "("
+									},
+									"LeftPattern": {
+										"Contains": {
+											"Dot": {
+												"Value": "."
+											},
+											"Pattern": {
+												"TreeNode": {
+													"Name": {
+														"Name": {
+															"StringValue": "Year"
+														}
+													},
+													"Colon": {
+														"Value": ":"
+													},
+													"Pattern": {
+														"LeafNode": {
+															"Expr": {
+																"BuiltIn": {
+																	"Symbol": {
+																		"Value": "=="
+																	},
+																	"Expr": {
+																		"Terminal": {
+																			"StringValue": "2025"
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									},
+									"Ampersand": {
+										"Value": "\u0026"
+									},
+									"RightPattern": {
+										"Contains": {
+											"Dot": {
+												"Value": "."
+											},
+											"Pattern": {
+												"TreeNode": {
+													"Name": {
+														"Name": {
+															"StringValue": "Month"
+														}
+													},
+													"Colon": {
+														"Value": ":"
+													},
+													"Pattern": {
+														"LeafNode": {
+															"Expr": {
+																"BuiltIn": {
+																	"Symbol": {
+																		"Value": "\u003e="
+																	},
+																	"Expr": {
+																		"Terminal": {
+																			"StringValue": "10"
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									},
+									"CloseParen": {
+										"Value": ")"
+									}
+								}
+							},
+							"CloseParen": {
+								"Value": ")"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

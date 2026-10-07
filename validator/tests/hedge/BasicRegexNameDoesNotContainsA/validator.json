@@ -1,0 +1,24 @@
+{
+	"TopPattern": {
+		"TreeNode": {
+			"Name": {
+				"RegexName": {
+					"Tilde": {
+						"Value": "~"
+					},
+					"Pattern": ".*B.*"
+				}
+			},
+			"Colon": {
+				"Value": ":"
+			},
+			"Pattern": {
+				"Empty": {
+					"Empty": {
+						"Value": "\u003cempty\u003e"
+					}
+				}
+			}
+		}
+	}
+}

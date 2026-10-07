@@ -1,0 +1,89 @@
+{
+	"TopPattern": {
+		"And": {
+			"OpenParen": {
+				"Value": "("
+			},
+			"LeftPattern": {
+				"Contains": {
+					"Dot": {
+						"Value": "."
+					},
+					"Pattern": {
+						"TreeNode": {
+							"Name": {
+								"AnyName": {
+									"Underscore": {
+										"Value": "_"
+									}
+								}
+							},
+							"Colon": {
+								"Value": ":"
+							},
+							"Pattern": {
+								"LeafNode": {
+									"Expr": {
+										"BuiltIn": {
+											"Symbol": {
+												"Value": "=="
+											},
+											"Expr": {
+												"Terminal": {
+													"StringValue": "0123456789"
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"Ampersand": {
+				"Value": "\u0026"
+			},
+			"RightPattern": {
+				"Contains": {
+					"Dot": {
+						"Value": "."
+					},
+					"Pattern": {
+						"TreeNode": {
+							"Name": {
+								"AnyName": {
+									"Underscore": {
+										"Value": "_"
+									}
+								}
+							},
+							"Colon": {
+								"Value": ":"
+							},
+							"Pattern": {
+								"LeafNode": {
+									"Expr": {
+										"BuiltIn": {
+											"Symbol": {
+												"Value": "=="
+											},
+											"Expr": {
+												"Terminal": {
+													"StringValue": "David"
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"CloseParen": {
+				"Value": ")"
+			}
+		}
+	}
+}

@@ -1,0 +1,97 @@
+{
+	"TopPattern": {
+		"TreeNode": {
+			"Name": {
+				"Name": {
+					"StringValue": "ABStar"
+				}
+			},
+			"Colon": {
+				"Value": ":"
+			},
+			"Pattern": {
+				"Interleave": {
+					"OpenCurly": {
+						"Value": "{"
+					},
+					"LeftPattern": {
+						"TreeNode": {
+							"Name": {
+								"Name": {
+									"StringValue": "A"
+								}
+							},
+							"Colon": {
+								"Value": ":"
+							},
+							"Pattern": {
+								"LeafNode": {
+									"Expr": {
+										"BuiltIn": {
+											"Symbol": {
+												"Value": "=="
+											},
+											"Expr": {
+												"Terminal": {
+													"StringValue": "a"
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					},
+					"SemiColon": {
+						"Value": ";"
+					},
+					"RightPattern": {
+						"Interleave": {
+							"LeftPattern": {
+								"TreeNode": {
+									"Name": {
+										"Name": {
+											"StringValue": "B"
+										}
+									},
+									"Colon": {
+										"Value": ":"
+									},
+									"Pattern": {
+										"LeafNode": {
+											"Expr": {
+												"BuiltIn": {
+													"Symbol": {
+														"Value": "=="
+													},
+													"Expr": {
+														"Terminal": {
+															"StringValue": "b"
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							},
+							"SemiColon": {
+								"Value": ";"
+							},
+							"RightPattern": {
+								"ZAny": {
+									"Star": {
+										"Value": "*"
+									}
+								}
+							}
+						}
+					},
+					"CloseCurly": {
+						"Value": "}"
+					}
+				}
+			}
+		}
+	}
+}
