@@ -1,0 +1,57 @@
+{
+	"TopPattern": {
+		"Contains": {
+			"Dot": {
+				"Value": "."
+			},
+			"Pattern": {
+				"TreeNode": {
+					"Name": {
+						"NameConj": {
+							"OpenParen": {
+								"Value": "("
+							},
+							"Left": {
+								"Name": {
+									"StringValue": "Name"
+								}
+							},
+							"Ampersand": {
+								"Value": "\u0026"
+							},
+							"Right": {
+								"AnyName": {
+									"Underscore": {
+										"Value": "_"
+									}
+								}
+							},
+							"CloseParen": {
+								"Value": ")"
+							}
+						}
+					},
+					"Colon": {
+						"Value": ":"
+					},
+					"Pattern": {
+						"LeafNode": {
+							"Expr": {
+								"BuiltIn": {
+									"Symbol": {
+										"Value": "=="
+									},
+									"Expr": {
+										"Terminal": {
+											"StringValue": "David"
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

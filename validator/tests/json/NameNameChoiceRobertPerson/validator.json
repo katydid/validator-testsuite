@@ -1,0 +1,55 @@
+{
+	"TopPattern": {
+		"Contains": {
+			"Dot": {
+				"Value": "."
+			},
+			"Pattern": {
+				"TreeNode": {
+					"Name": {
+						"NameChoice": {
+							"OpenParen": {
+								"Value": "("
+							},
+							"Left": {
+								"Name": {
+									"StringValue": "Name"
+								}
+							},
+							"Pipe": {
+								"Value": "|"
+							},
+							"Right": {
+								"Name": {
+									"StringValue": "FirstName"
+								}
+							},
+							"CloseParen": {
+								"Value": ")"
+							}
+						}
+					},
+					"Colon": {
+						"Value": ":"
+					},
+					"Pattern": {
+						"LeafNode": {
+							"Expr": {
+								"BuiltIn": {
+									"Symbol": {
+										"Value": "=="
+									},
+									"Expr": {
+										"Terminal": {
+											"StringValue": "David"
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

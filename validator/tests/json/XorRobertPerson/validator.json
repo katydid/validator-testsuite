@@ -1,0 +1,78 @@
+{
+	"TopPattern": {
+		"Contains": {
+			"Dot": {
+				"Value": "."
+			},
+			"Pattern": {
+				"Xor": {
+					"OpenParen": {
+						"Value": "("
+					},
+					"LeftPattern": {
+						"TreeNode": {
+							"Name": {
+								"Name": {
+									"StringValue": "Name"
+								}
+							},
+							"Colon": {
+								"Value": ":"
+							},
+							"Pattern": {
+								"LeafNode": {
+									"Expr": {
+										"BuiltIn": {
+											"Symbol": {
+												"Value": "=="
+											},
+											"Expr": {
+												"Terminal": {
+													"StringValue": "David"
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					},
+					"Caret": {
+						"Value": "^"
+					},
+					"RightPattern": {
+						"TreeNode": {
+							"Name": {
+								"Name": {
+									"StringValue": "Name"
+								}
+							},
+							"Colon": {
+								"Value": ":"
+							},
+							"Pattern": {
+								"LeafNode": {
+									"Expr": {
+										"BuiltIn": {
+											"Symbol": {
+												"Value": "=="
+											},
+											"Expr": {
+												"Terminal": {
+													"StringValue": "Robert"
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					},
+					"CloseParen": {
+						"Value": ")"
+					}
+				}
+			}
+		}
+	}
+}
